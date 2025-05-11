@@ -20,15 +20,18 @@ if (isNaN(dividend) || isNaN(divider)) {
 }
 
 // Check for division by zero
-if (num2 === 0) {
+if (divider === 0) {
   result.innerText = "Division not performed. Invalid number provided. Try again";
   console.error("Division by zero attempted", new Error("Division by zero"));
   return;
 }
 
-// division and handle decimals
-const divisionResult = Math.floor(num1 / num2);
-result.innerText = divisionResult;
+//  division and handle decimals
+let divisionResult = dividend / divider; 
 
-  result.innerText = dividend / divider;
+if (Number.isInteger(divisionResult)) {  
+  divisionResult = Math.floor(divisionResult);
+}
+
+  result.innerText = divisionResult;
 });
