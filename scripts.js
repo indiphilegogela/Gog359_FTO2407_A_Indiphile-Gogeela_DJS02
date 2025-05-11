@@ -25,5 +25,10 @@ if (num2 === 0) {
   console.error("Division by zero attempted", new Error("Division by zero"));
   return;
 }
+
+// division and handle decimals
+const divisionResult = Math.floor(num1 / num2);
+result.innerText = divisionResult;
+
   result.innerText = dividend / divider;
 });
